@@ -1,0 +1,234 @@
+Shrine ::=
+	{Name}
+
+Name ::=
+	The {descriptor} {place} 40%
+	{place} of {diety} 40%
+	Place where the {animal.plural} {action} 10%
+	{place} of the {number} {animal.plural} 10%
+
+place ::=
+	Shrine 34%
+	{building} 33%
+	{natural_feature} 33%
+
+descriptor ::=
+	{adjective} 67%
+	{action.gerund} 33%
+
+diety ::=
+	{concept} 30%
+	the {person} 20%
+	the {animal} 20%
+	the {descriptor} {person} 10%
+	The {descriptor} {animal} 10%
+	{descriptor} {concept} 10%
+
+adjective ::=
+	Alabaster
+	Amaranthine
+	Ancestral
+	Ancient
+	Astral
+	Blessed
+	Blight
+	Blue
+	Bright
+	Celestial
+	Corrupted
+	Dark
+	Death
+	Divine
+	Elder
+	Eternal
+	Ethereal
+	Exalted
+	Foul
+	Ghost
+	Golden
+	Guilty
+	Hallowed
+	Heavenly
+	Honor
+	Immortal
+	Impure
+	Iron
+	Ivory
+	Lucent
+	Pale
+	Pearl
+	Phantom
+	Primal
+	Putrid
+	Radiant
+	Red
+	Rusted
+	Sacred
+	Sanctified
+	Sanguine
+	Shining
+	Silver
+	Soul
+	Spirit
+	Still
+	Tainted
+	Timeless
+	Tribal
+	White
+	Wicked
+
+action ::=
+	Burn
+	Creep
+	Dance
+	Dream
+	Drown
+	Fade
+	Fall
+	Glow
+	Howl
+	Hunt
+	Laugh
+	Return
+	Rise
+	Rot
+	Shine
+	Shiver
+	Sing
+	Slumber
+	Smile
+	Stand
+	Travel
+	Wake
+	Weep
+	Whisper
+
+animal ::=
+	Bear
+	Beetle
+	Carp
+	Cat
+	Cormorant
+	Cow
+	Deer
+	Dog
+	Fox
+	Frog
+	Goat
+	Hart
+	Hawk
+	Heron
+	Horse
+	Hound
+	Lion
+	Locust
+	Magpie
+	Owl
+	Panther
+	Peacock
+	Phoenix
+	Rabbit
+	Ram
+	Rat
+	Raven
+	Salamander
+	Scorpion
+	Snake
+	Spider
+	Squirrel
+	Stag
+	Tiger
+	Toad
+	Tortoise
+	Turtle
+	Vulture
+	Wolf
+
+building ::=
+	Altar
+	Gate
+	Obelisk
+	Pagoda
+	Pillar
+	Pillars
+
+concept ::=
+	Air
+	Ancestors
+	Anguish
+	Blight
+	Confessions
+	Connections
+	Courage
+	Dance
+	Decay
+	Dreams
+	Earth
+	Fire
+	Forgiveness
+	Fortune
+	Healing
+	Judgement
+	Justice
+	Knowledge
+	Lore
+	Love
+	Mending
+	Mercy
+	Music
+	Poetry
+	Prosperity
+	Protection
+	Silence
+	Storms
+	Strength
+	Textiles
+	Transcendence
+	Triumph
+	Truth
+	Water
+	Wisdom
+
+natural_feature ::=
+	Basin
+	Cave
+	Cavern
+	Cenote
+	Grotto
+	Grove
+	Menhir
+	Pond
+	Pool
+	Stones
+	Tree
+
+number ::=
+	Eight
+	Eight-and-a-Half
+	Five
+	Forty
+	Four
+	Nine
+	Nine-and-Twenty
+	Ninety-Nine
+	Seven
+	Seventy-Two
+	Six
+	Thirty-Six
+	Thousand
+	Thousand-Thousand
+	Three
+	Twelve
+	Two
+
+person ::=
+	Ancestor
+	Emperor
+	Empress
+	Father
+	Hunter
+	Mother
+	Parent
+	Sage
+	Sibling
+	Warrior

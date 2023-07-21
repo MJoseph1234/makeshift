@@ -1,0 +1,49 @@
+Ruins
+	{Name}
+
+Name
+	{Adjective} {Structure} 90%
+	The {Structure} of {Concept}
+	{Adjective} {Structure} of {Concept}
+
+Descriptor
+
+Adjective
+	Forgotten
+	Lost
+	Crumbling
+	Decaying
+	Ancient
+	Dilapidated
+	Abandoned
+	Shadowed
+	Whispering
+	Echoing
+	Veiled
+	Sundered
+	Crumbled
+	Overgrown
+	Shattered
+	Forsaken
+
+Concept
+	Desolation
+	the Ancients
+
+Structure
+	Ruins
+	Spire
+	Monastery
+	Catacombs
+	Citadel
+	Archways
+	Sanctum
+	Stronghold
+	Labyrinth
+	Halls
+	Bastion
+	Temple
+	Keep
+	Crypt
+	Observatory
+	Shrine

@@ -1,0 +1,35 @@
+Insult
+	{adjective} {noun}
+
+adjective
+	flaxie-addled
+	yawnsome
+	blunderbrained
+	slattern
+	teary-eyed
+	blithering
+	crusty
+	ragged
+	unscrupulous
+	perilous
+	slack-jawed
+	weak-willed
+
+noun
+	moppin
+	slattern
+	baboon
+	charlatan
+	clodhopper
+	featherbrain
+	gargoyle
+	kinchin
+	rapscallion
+	troglodyte
+	rogue
+	scoundrel
+	shite
+
+//Flaxie-addled moppin
+//blunderbrain
+//perilous slattern

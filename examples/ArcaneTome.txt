@@ -1,0 +1,105 @@
+ArcaneTome
+	{Name}
+
+Name
+	The {book} of {wizard} 10%
+	The {adjective} {book} of {wizard} 10%
+	The {book} of {concept} 10%
+	The {adjective} {book} of {thing} 10%
+	The {adjective} {book} 10%
+	The {concept} {book} 10%
+	{wizard}'s {book} of {concept} 20%
+	{wizard}'s {book} 20%
+
+concept
+	{adjective} {thing}
+	{thing}
+
+adjective
+	Accursed
+	Arcane
+	Black
+	Blighted
+	Comprehensive
+	Dark
+	Eldritch
+	Elemental
+	Empyrean
+	Eternal
+	Fell
+	Fiendish
+	Fundamental
+	Good
+	Great
+	Holy
+	Infernal
+	Interplanar
+	Lost
+	Occult
+	Runic
+	Sublime
+	Superb
+	Terror
+	Unearthly
+	Vile
+	Wondrous
+
+book
+	Articles
+	Atlas
+	Book
+	Canon
+	Codex
+	Enchidrion
+	Folio
+	Fragments
+	Grimoire
+	Handbook
+	Incunabulum
+	Leaves
+	Libram
+	Manual
+	Manuscript
+	Opus
+	Parchments
+	Psalms
+	Scripture
+	Scrolls
+	Slates
+	Tablets
+	Tome
+	Volume
+	Writings
+
+magic_concept
+	Arcana
+	Art
+	Blood
+	Destruction
+	Flame
+	Healing
+	Magic
+	Magiks
+	Regeneration
+	Silence
+	Summoning
+	Understanding
+	Wizardry
+
+wizard_name
+	Archemod
+	Bali
+	Blossom
+	Brad
+	Cune
+	Gramlin
+	Gwendolynn
+	Marika
+	Noric
+	Nox
+	Rya
+	Tasha
+	The Fool
+	The Lost Empire
+	Yasmin
+	Ziri

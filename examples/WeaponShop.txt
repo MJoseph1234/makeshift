@@ -1,0 +1,101 @@
+WeaponShop ::=
+	{Name} {Treasure} {Description} {Owner} {Patrons}
+
+Name ::=
+	The {animal|profession}'s {place|item} 30%
+	The {animal} {profession}'s {place} 10%
+	{The |By |}{item} and {item} 10%
+	{smith-name|animal}'s {descriptor} {place|item} 10%
+	{smith-name|animal}'s Alliterate({item} and {item}) 20%
+	{pre-made-name} 10%
+
+descriptor ::=
+	{adjective} 66%
+	{action.gerund} 34%
+
+item ::=
+	Anvil
+	Armament
+	Armor
+	Arsenal
+	Blades
+	Fire
+	Forge
+	Hammer
+	Hand
+	Iron
+	Metal
+	Muscle
+	Shields
+	Steel
+	Thunder
+	Weaponry
+
+place ::=
+	Outfitter
+	Vault
+	Roost
+	Caravan
+	Bazaar
+	Exchange
+	Emporium
+	Showroom
+
+animal ::=
+	Armadillo
+	Ram
+	Griffon
+	Lion
+	Minotaur
+	Dragon
+	Fox
+	Scorpion
+	Unicorn
+	Rhino
+	Naga
+	Hawk
+	Heron
+	Tiger
+	Wolf
+	Centaur
+	Giant
+	Tuna
+
+adjective ::=
+	Marvelous
+	Hot
+	Fiery
+	Majestic
+	Wonderous
+	Heavy
+	Mighty
+	Trusty
+	Metal
+	Ancient
+
+smith-name ::=
+	Haldor
+	Smith
+	Griffon
+	Ningal
+	Balthazar
+
+profession ::=
+	Warrior
+	Blacksmith
+	Armoror
+	Mercenary
+	Ranger
+	Soldier
+	Smith
+	Defender
+	Engineer
+	Craftswoman
+	Smithy
+
+pre-made-name ::=
+	A Fighting Chance
+	On the Defensive
+	Ironclad
+	The Eternal Flame
+	Hammer Time

@@ -1,0 +1,165 @@
+Gang
+	{Name}
+
+Name
+	{adjective} {Occupation} {Grouping}
+	{Occupation.plural}'s {Grouping} 
+	The {{adjective | Neighborhood } {Grouping}|Grouping} of {Occupation.plural}
+	The {adjective} {Grouping} of {Neighborhood}
+	The {Occupation.plural} of {Neighborhood}
+	The {Grouping} of {Patron}
+	{adjective} {Occupation.plural} of {Patron}
+
+Neighborhood
+	{CardinalDirection}{Regional_Name.lowercase}
+	The {Direction} {Regional_Name.plural}
+
+Patron
+	The {adjective} {concept}
+	The {verb.gerund|verb.past_participle} {concept}
+	{adjective} {concept}
+	{concept}
+	{Diety}'s {concept}
+	{Diety}
+
+adjective
+	Holy
+	Wicked
+	Ruthless
+	Annointed
+	Great
+	Minor
+	Grave
+	Restless
+	Ancestral
+	Eternal
+	Ashen
+
+Grouping
+	Alliance
+	Association
+	Fellowship
+	Guild
+	Gang
+	Team
+	Family
+	Sisterhood
+	Order
+	Fraternal Order
+	Corporation
+	League
+	Society
+	Federation
+	Union
+	Brood
+	Council
+	Faction
+	Clan
+	Coalition
+
+Diety
+	The High Table
+	Gaia
+	The Earthmother
+	Hearthfire
+	Stoneforge
+	Infinity
+	The Green House
+
+concept
+	Light
+	Shadow
+	Malice
+	Sorrow
+	Science
+	Dreams
+	Mercy
+	Justice
+	War
+	Blessing
+	Sin
+	Grace
+
+verb
+	Burn
+	Creep
+	Dawn
+	Guide
+	Rot
+	Rise
+	Wake
+	Whisper
+	Shine
+	Hunt
+	Howl
+	Fade
+
+Nothing
+	The Guiding Light
+	The Green House
+	Shadow
+	Malice
+	{adjective} Sorrow
+	Science
+	Hearthfire
+	{adjective} Dreams
+	Mercy
+	Justice
+	War
+	The High Table
+	Gaia's Blessing
+
+Occupation
+	Bonedigger
+	Glass Polisher
+	Bladespinner
+	Bricklayer
+	Blacksmith
+	Guardian
+	Town Watch
+	Protector
+	Theif
+	Raider
+	Dock Worker
+	Knight
+	Fletcher
+	Trader
+	Adventurer
+	Alchemist
+	Monk
+	Gunslinger
+	Artist
+	Mage
+	Hexsmith
+	Cleric
+	Witch
+	Lion
+	Hawk
+	Soulweaver
+	Mechanist
+
+Regional_Name
+	Badland
+	Woods
+	Corner
+	Port
+	Market
+	District
+	Slum
+	Land
+	Field
+	Fold
+
+Direction
+	{CardinalDirection}ern
+	{CardinalDirection}side
+	Lower
+	Upper
+	Uptown
+	Downtown
+
+CardinalDirection
+	North
+	South
+	East
+	West
