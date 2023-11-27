@@ -1,22 +1,22 @@
-Shrine ::=
+Shrine
 	{Name}
 
-Name ::=
+Name
 	The {descriptor} {place} 40%
 	{place} of {diety} 40%
 	Place where the {animal.plural} {action} 10%
 	{place} of the {number} {animal.plural} 10%
 
-place ::=
+place
 	Shrine 34%
 	{building} 33%
 	{natural_feature} 33%
 
-descriptor ::=
+descriptor
 	{adjective} 67%
 	{action.gerund} 33%
 
-diety ::=
+diety
 	{concept} 30%
 	the {person} 20%
 	the {animal} 20%
@@ -24,7 +24,7 @@ diety ::=
 	The {descriptor} {animal} 10%
 	{descriptor} {concept} 10%
 
-adjective ::=
+adjective
 	Alabaster
 	Amaranthine
 	Ancestral
@@ -77,7 +77,7 @@ adjective ::=
 	White
 	Wicked
 
-action ::=
+action
 	Burn
 	Creep
 	Dance
@@ -103,7 +103,7 @@ action ::=
 	Weep
 	Whisper
 
-animal ::=
+animal
 	Bear
 	Beetle
 	Carp
@@ -144,7 +144,7 @@ animal ::=
 	Vulture
 	Wolf
 
-building ::=
+building
 	Altar
 	Gate
 	Obelisk
@@ -152,7 +152,7 @@ building ::=
 	Pillar
 	Pillars
 
-concept ::=
+concept
 	Air
 	Ancestors
 	Anguish
@@ -189,7 +189,7 @@ concept ::=
 	Water
 	Wisdom
 
-natural_feature ::=
+natural_feature
 	Basin
 	Cave
 	Cavern
@@ -202,7 +202,7 @@ natural_feature ::=
 	Stones
 	Tree
 
-number ::=
+number
 	Eight
 	Eight-and-a-Half
 	Five
@@ -221,7 +221,7 @@ number ::=
 	Twelve
 	Two
 
-person ::=
+person
 	Ancestor
 	Emperor
 	Empress

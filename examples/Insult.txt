@@ -1,11 +1,13 @@
 Insult
-	{adjective} {noun}
+	{noun}
+	{adjective} {noun} 80%
+	{adjective}, {adjective} {noun}
 
 adjective
 	flaxie-addled
 	yawnsome
 	blunderbrained
-	slattern
+	slatternly
 	teary-eyed
 	blithering
 	crusty
@@ -14,6 +16,17 @@ adjective
 	perilous
 	slack-jawed
 	weak-willed
+	teetotaling
+	dew-beating
+	muck-sprouting
+	whiffling
+	exorbitant
+	cow-handed
+	disheveled
+	nasty
+	pompous
+	over-inflated
+	idle-brained
 
 noun
 	moppin
@@ -28,8 +41,13 @@ noun
 	troglodyte
 	rogue
 	scoundrel
-	shite
+	shite-for-brains
+	mouth breather
+	simpleton
+	dalcop
+	fopdoodle
 
-//Flaxie-addled moppin
-//blunderbrain
-//perilous slattern
+favorites
+	Flaxie-addled moppin
+	blunderbrain
+	perilous slattern
