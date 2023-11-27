@@ -1,3 +1,4 @@
+from .utils import GeneratorSyntaxError
 from .token import TokenType, Token
 
 KEYS = {

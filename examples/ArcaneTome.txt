@@ -5,15 +5,15 @@ Name
 	The {book} of {wizard} 10%
 	The {adjective} {book} of {wizard} 10%
 	The {book} of {concept} 10%
-	The {adjective} {book} of {thing} 10%
+	The {adjective} {book} of {magic_concept} 10%
 	The {adjective} {book} 10%
 	The {concept} {book} 10%
 	{wizard}'s {book} of {concept} 20%
 	{wizard}'s {book} 20%
 
 concept
-	{adjective} {thing}
-	{thing}
+	{adjective} {magic_concept}
+	{magic_concept}
 
 adjective
 	Accursed
@@ -86,7 +86,7 @@ magic_concept
 	Understanding
 	Wizardry
 
-wizard_name
+wizard
 	Archemod
 	Bali
 	Blossom

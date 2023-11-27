@@ -1,4 +1,4 @@
-
+from .utils import GeneratorSyntaxError
 from .token import Token, TokenType
 from . import ast
 

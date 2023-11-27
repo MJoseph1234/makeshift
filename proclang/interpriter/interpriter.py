@@ -1,6 +1,7 @@
 
 import random
 
+from .utils import GeneratorSyntaxError
 from . import utils
 from . import ast
 
@@ -37,7 +38,7 @@ class TreeWalkInterpriter(ast.Visitor):
 			else:
 				temp.append(0)
 
-		s = (100 - sum(temp)) / temp.count(0)
+		s = (100 - sum(temp)) / max(temp.count(0), 1)
 		for weight in temp:
 			if weight == 0:
 				weights.append(s)

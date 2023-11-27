@@ -1,4 +1,5 @@
-
+class GeneratorSyntaxError(Exception):
+	pass
 
 def gerund(verb):
 	if verb[-1] == 'e':
