@@ -1,6 +1,11 @@
-from .utils import GeneratorSyntaxError
-from .token import Token, TokenType
-from . import ast
+"""The parser takes the list of Tokens from the Lexer and builds an 
+abstract syntax tree.
+
+"""
+
+from interpriter.utils import GeneratorSyntaxError
+from interpriter.token import Token, TokenType
+from interpriter import ast
 
 class Parser():
 	def __init__(self, tokens):

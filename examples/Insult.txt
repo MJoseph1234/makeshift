@@ -2,6 +2,7 @@ Insult
 	{noun}
 	{adjective} {noun} 80%
 	{adjective}, {adjective} {noun}
+	{favorites} 2%
 
 adjective
 	flaxie-addled
@@ -14,6 +15,8 @@ adjective
 	ragged
 	unscrupulous
 	perilous
+	slippery
+	dastardly
 	slack-jawed
 	weak-willed
 	teetotaling
@@ -27,6 +30,28 @@ adjective
 	pompous
 	over-inflated
 	idle-brained
+	boresomely
+	tedious
+	bewilderous
+	stupefied
+	dementable
+	little
+	fuddlesome
+	barrel-fevered
+	frigid
+	shaken
+	jelly-headed
+	unhip
+	cowardly
+	book-avoidant
+	embarrassed
+	addletoungued
+	applenecked
+	crumpet-faced
+	despicable
+	egg-headed
+	inconvenient
+	gormless
 
 noun
 	moppin
@@ -42,12 +67,23 @@ noun
 	rogue
 	scoundrel
 	shite-for-brains
-	mouth breather
+	mouth-breather
 	simpleton
 	dalcop
 	fopdoodle
+	snollygoster
+	ninnyhammer
+	bung-pile
+	boot-shaker
+	marauder
+	fanatic
+	orc
+	amature
+	doodlebug
+
 
 favorites
 	Flaxie-addled moppin
 	blunderbrain
 	perilous slattern
+	teatottalling ninnyhammer

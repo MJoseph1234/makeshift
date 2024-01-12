@@ -29,10 +29,8 @@ def pluralize(word):
 def _pluralize(word):
 	if word.lower() == 'goose':
 		return('geese', '')
-	if word.lower() == 'knife':
-		return('knives', '')
-	if word.lower() == 'life':
-		return('lives', '')
+	if any(word.lower().endswith(test) for test in ['knife', 'life', 'wife']):
+		return(word[-2], 'ves')
 	if word.lower() in {'beef', 'carp', 'cod', 'deer', 'perch', 'potatoes', 'sheep', 'squid', 'woods' }:
 		return(word, '')
 	if word[-1] in {'s', 'x', 'z'}:

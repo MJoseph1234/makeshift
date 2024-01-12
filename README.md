@@ -1,10 +1,10 @@
 # ProcLang
-A tool for creating your own procedurally generated {text|characters|settings|worlds|anything}.
+A tool for creating your own procedurally generated { text | characters | settings | worlds | anything }.
 
 ### What is this?
 `ProcLang` is designed to help {storytellers|authors|dungeon masters|people like you} find inspiration for creating settings and characters. `ProcLang` allows creators to write a template for whatever it is they want to make, and then (using the power of \**computers*\*) procedurally generate something brand new based on that template.
 
-It works kind of like a MadLib, except you have complete control over the list of options, and you can even nest one MadLib inside another for extra variety. The computer then uses the options you define to fill out all the blanks.
+It works kind of like a MadLib, except you have complete control over the list of options, and you can even nest one MadLib inside another for extra variety. The computer then uses the options you define to fill in all the blanks.
 
 This repository contains two things: 
 1. A little mini-language and syntax for writing a template

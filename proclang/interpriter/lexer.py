@@ -1,5 +1,7 @@
-from .utils import GeneratorSyntaxError
-from .token import TokenType, Token
+# The lexer turns the raw input into a series of defined Tokens
+
+from interpriter.utils import GeneratorSyntaxError
+from interpriter.token import TokenType, Token
 
 KEYS = {
 	'OPEN_BRACE': '{',

@@ -4,7 +4,7 @@ from lexer import Lexer
 from parser import Parser
 from interpriter import TreeWalkInterpriter
 
-import ast
+import interpriter.ast
 import file_printer
 import ast_printer
 

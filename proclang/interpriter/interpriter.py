@@ -1,9 +1,12 @@
+"""
+The interpriter takes the Abstract Syntax Tree from the parser and 
+recursively executes it starting from the highest, most general node
+"""
 
 import random
 
-from .utils import GeneratorSyntaxError
-from . import utils
-from . import ast
+from interpriter import utils
+from interpriter import ast
 
 class TreeWalkInterpriter(ast.Visitor):
 
