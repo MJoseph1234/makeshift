@@ -2,9 +2,9 @@
 import argparse
 from pathlib import Path
 
-from interpriter.lexer import Lexer
-from interpriter.parser import Parser
-from interpriter.interpriter import TreeWalkInterpriter
+from makeshift.interpriter.lexer import Lexer
+from makeshift.interpriter.parser import Parser
+from makeshift.interpriter.interpriter import TreeWalkInterpriter
 
 def main():
 	cli_parser = argparse.ArgumentParser(

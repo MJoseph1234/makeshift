@@ -4,9 +4,9 @@ from lexer import Lexer
 from parser import Parser
 from interpriter import TreeWalkInterpriter
 
-import interpriter.ast
-import file_printer
-import ast_printer
+import makeshift.interpriter.ast
+import makeshift.file_printer
+import makeshift.ast_printer
 
 def test_lexer(filename = None):
 	if filename is None:

@@ -6,12 +6,15 @@ build-backend = "setuptools.build_meta"
 name = "makeshift"
 version = "0.0.1"
 requires-python = ">= 3.11"
-dependencies = []]
+dependencies = []
 authors = [
 	{name = "Michael Joseph", email = "josco.michael@gmail.com"}
 ]
 description = "MakeShift text procedural generation"
 readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/MJoseph1234/makeshift"
 
 # executables based on this:
 # https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#creating-executable-scripts

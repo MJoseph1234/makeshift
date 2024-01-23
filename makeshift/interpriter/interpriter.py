@@ -5,8 +5,8 @@ recursively executes it starting from the highest, most general node
 
 import random
 
-from interpriter import utils
-from interpriter import ast
+from makeshift.interpriter import utils
+from makeshift.interpriter import ast
 
 class TreeWalkInterpriter(ast.Visitor):
 

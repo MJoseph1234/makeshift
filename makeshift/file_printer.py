@@ -1,4 +1,4 @@
-import interpriter.ast as ast
+import makeshift.interpriter.ast as ast
 
 class FilePrinter(ast.Visitor):
 	"""

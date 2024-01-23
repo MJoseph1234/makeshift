@@ -3,9 +3,9 @@ abstract syntax tree.
 
 """
 
-from interpriter.utils import GeneratorSyntaxError
-from interpriter.token import Token, TokenType
-from interpriter import ast
+from makeshift.interpriter.utils import GeneratorSyntaxError
+from makeshift.interpriter.token import Token, TokenType
+from makeshift.interpriter import ast
 
 class Parser():
 	def __init__(self, tokens):

@@ -1,6 +1,6 @@
 import sys
 
-import interpriter.ast as ast
+import makeshift.interpriter.ast as ast
 
 class AstPrinter(ast.Visitor):
 	def __init__(self, target = sys.stdout):
