@@ -10,7 +10,7 @@ dependencies = []
 authors = [
 	{name = "Michael Joseph", email = "josco.michael@gmail.com"}
 ]
-description = "A templating language and interpreter for quick text procedural generation"
+description = "Simple text procedural generation"
 readme = "README.md"
 
 [project.urls]
@@ -24,4 +24,4 @@ Source = "https://github.com/MJoseph1234/makeshift"
 makeshift = "makeshift.cli:main"
 
 [tool.setuptools]
-packages = ["makeshift"]
+packages = ["makeshift", "makeshift.interpreter"]
