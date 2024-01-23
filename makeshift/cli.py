@@ -2,9 +2,9 @@
 import argparse
 from pathlib import Path
 
-from makeshift.interpriter.lexer import Lexer
-from makeshift.interpriter.parser import Parser
-from makeshift.interpriter.interpriter import TreeWalkInterpriter
+from makeshift.interpreter.lexer import Lexer
+from makeshift.interpreter.parser import Parser
+from makeshift.interpreter.interpreter import TreeWalkInterpreter
 
 def main():
 	cli_parser = argparse.ArgumentParser(
@@ -30,7 +30,7 @@ def main():
 	pr = Parser(x.tokens)
 	ast = pr.generator(args.infile)
 
-	interp = TreeWalkInterpriter()
+	interp = TreeWalkInterpreter()
 	if args.count == 1:
 		print(f'{interp.visit_generator_node(ast)}')
 		return

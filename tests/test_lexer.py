@@ -3,8 +3,8 @@
 import unittest
 
 #import proclang
-from proclang.interpriter.lexer import Lexer
-from proclang.interpriter.token import Token, TokenType
+from proclang.interpreter.lexer import Lexer
+from proclang.interpreter.token import Token, TokenType
 
 class TestLexerMethods(unittest.TestCase):
 	#passing empty file

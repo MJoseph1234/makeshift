@@ -1,14 +1,14 @@
 """
-The interpriter takes the Abstract Syntax Tree from the parser and 
+The interpreter takes the Abstract Syntax Tree from the parser and 
 recursively executes it starting from the highest, most general node
 """
 
 import random
 
-from makeshift.interpriter import utils
-from makeshift.interpriter import ast
+from makeshift.interpreter import utils
+from makeshift.interpreter import ast
 
-class TreeWalkInterpriter(ast.Visitor):
+class TreeWalkInterpreter(ast.Visitor):
 
 	def __init__(self):
 		self.chooser = self.weight_based_choice

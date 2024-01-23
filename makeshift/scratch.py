@@ -2,9 +2,9 @@ import argparse
 
 from lexer import Lexer
 from parser import Parser
-from interpriter import TreeWalkInterpriter
+from interpreter import TreeWalkInterpreter
 
-import makeshift.interpriter.ast
+import makeshift.interpreter.ast
 import makeshift.file_printer
 import makeshift.ast_printer
 
@@ -184,7 +184,7 @@ def run_from_cli():
 	# printer = ast_printer.AstPrinter()
 	# printer.print_ast(node = ast)
 
-	interp = TreeWalkInterpriter()
+	interp = TreeWalkInterpreter()
 	if args.count == 1:
 		print(f'{interp.visit_generator_node(ast)}')
 		return

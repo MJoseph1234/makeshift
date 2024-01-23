@@ -43,7 +43,7 @@ Running this template through a `MakeShift` parser will randomly generate a some
 - The Banshee Bay
 - Ghostly Coast  
 
-With just a couple lines and some fun adjectives, we have a simple `MakeShift` example can create about 40 random names for our haunted beach. A little time and creativity to expand this template can allow limitless randomly generated options.
+With just a couple lines and some fun adjectives, we have a simple `MakeShift` example that can create about 40 random names for our haunted beach. A little time and creativity to expand this template can allow limitless randomly generated options.
 
 ### How can I use it?
 Great question! There's a few things you can do:
