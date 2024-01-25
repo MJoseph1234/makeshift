@@ -6,3 +6,6 @@
 #textareas {
 	display: inline-block;
 }
+textarea {
+	resize: none;
+}
