@@ -14,20 +14,22 @@ description = "Procedural text generation based on phrase templates."
 readme = "README.md"
 license = {file = "LICENSE"}
 
+classifiers = [
+	"Development Status :: 2 - Pre-Alpha",
+	"License :: OSI Approved :: MIT License",
+]
+
 [project.urls]
 Homepage = "https://github.com/MJoseph1234/makeshift"
 Source = "https://github.com/MJoseph1234/makeshift"
 
-classifiers = [
-	"Development Status :: 2 - Pre-Alpha",
-	"License :: OSI Approved :: MIT License"
-]
+
 
 # executables based on this:
 # https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#creating-executable-scripts
 
 [project.scripts]
-makeshift = "makeshift.cli:main"
+makeshift = "makeshift.__main__:main"
 
 [tool.setuptools]
 packages = ["makeshift", "makeshift.interpreter"]
