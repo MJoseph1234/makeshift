@@ -4,7 +4,7 @@ MakeShift is a tool for making procedurally generated text based on pre-defined 
 
 This package includes a simple specification for how to write MakeShift-style phrase templates and an interpreter for generating text from those templates.
 
-MakeShift is designed for dungeon masters, writers and storytellers of all kinds to help come up with ideas and find inspiration when making new `{ characters | settings | stories | worlds | anything }`.
+MakeShift is designed for dungeon masters, writers and storytellers of all kinds to find inspiration when making new `{ characters | settings | stories | worlds | anything }`.
 
 ## Installation
 
