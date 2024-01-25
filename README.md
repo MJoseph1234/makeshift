@@ -14,10 +14,10 @@ MakeShift can be installed from [PyPi](https://pypi.org/project/makeshift/) usin
 ```
 
 You can call `makeshift` from the command-line and provide a phrase template file to generate a random result.
-
 ```bash
 > makeshift /path/to/file/my_template.txt
 ```
 
 You can also download the MakeShift repository from [https://github.com/MJoseph1234/makeshift](https://github.com/MJoseph1234/makeshift)
 
+There's a number of template files in the `examples/` directory of the repository. You can expand on those or use them as a blueprint to write your own.
