@@ -26,7 +26,6 @@ def parse_cli_args():
 	return(args)
 
 def main():
-
 	args = parse_cli_args()
 	if args is None:
 		sys.exit(2)
@@ -53,3 +52,6 @@ def find_file(filename):
 		return(filename)
 	elif Path('examples', filename).exists():
 		return(Path('examples', filename))
+
+if __name__ == "__main__":
+	main()
