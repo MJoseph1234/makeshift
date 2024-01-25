@@ -19,5 +19,5 @@ You can call `makeshift` from the command-line and provide a phrase template fil
 > makeshift /path/to/file/my_template.txt
 ```
 
-You can also download the MakeShift repository from [](https://github.com/MJoseph1234/makeshift)
+You can also download the MakeShift repository from [https://github.com/MJoseph1234/makeshift](https://github.com/MJoseph1234/makeshift)
 
