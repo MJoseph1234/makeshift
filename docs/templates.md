@@ -1,3 +1,8 @@
+---
+layout: page
+title: Writing Templates
+---
+
 # Writing MakeShift Templates
 Writing a new template for MakeShift requires an idea, a little creativity, and understanding the simple MakeShift syntax. You can write a template in your favorite text editor, like Notepad++, Sublime Text, or directly into the [lab](lab.html) editor. So pop open your favorite editor and let's get started with an example.
 

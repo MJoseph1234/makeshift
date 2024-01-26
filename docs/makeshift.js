@@ -13,6 +13,10 @@ async function loadMakeshift(){
 let loadMakeshiftPromise = loadMakeshift();
 
 async function runMakeshift(){
+  if (textInput.value.trim() == "") {
+    resultsArea.value = ""
+    return
+  }
   let pyodide = await loadMakeshiftPromise;
   results = pyodide.runPython(`
     import js

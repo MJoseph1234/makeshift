@@ -78,7 +78,7 @@ noun
 	marauder
 	fanatic
 	orc
-	amature
+	amateure
 	doodlebug
 
 
