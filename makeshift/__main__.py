@@ -3,9 +3,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from makeshift.interpreter.lexer import Lexer
-from makeshift.interpreter.parser import Parser
-from makeshift.interpreter.interpreter import TreeWalkInterpreter
+from makeshift.interpreter import run
 
 def parse_cli_args():
 	parser = argparse.ArgumentParser(
@@ -31,21 +29,19 @@ def main():
 		sys.exit(2)
 
 	filename = find_file(args.input_file)
-	with open(filename) as gen_file:
-		x = Lexer(gen_file.read())
 
-	x.lexv2()
+	with open(filename) as template_file:
+		source = template_file.read()
 
-	pr = Parser(x.tokens)
-	ast = pr.generator(args.input_file)
+	results = run(source, count = args.count)
 
-	interp = TreeWalkInterpreter()
-	if args.count == 1:
-		print(f'{interp.visit_generator_node(ast)}')
+	if len(results) == 1:
+		print(results[0])
 		return
-	
-	for x in range(0,args.count):
-		print(f'{x+1:>2}. {interp.visit_generator_node(ast)}')
+
+	for i in range(0, len(results)):
+		print(f'{i+1:>2}. {results[i]}')
+	return
 
 def find_file(filename):
 	if Path(filename).exists():

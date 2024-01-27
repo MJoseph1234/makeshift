@@ -1,3 +1,11 @@
+/*
+Pyodide will always use the version of makeshift available on PyPI.
+There may be changes on the github that are not yet released as a PyPI version.
+
+Any changes to the python here must be compatable with the latest PyPI release
+of Makeshift, not necessarily the code shown on GitHub.
+*/
+
 const textInput = document.getElementById("textInput");
 const resultsArea = document.getElementById("results");
 const counter = 1;
