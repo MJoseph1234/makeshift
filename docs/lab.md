@@ -11,7 +11,7 @@ The lab runs MakeShift templates on the fly to make five random results. Enter y
 
 <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
 <link rel="stylesheet" href="lab_styles.css">
-<script src="makeshift.js"></script>
+
 <div>
   <input id="generateButton" type="button" onclick="runMakeshift()" value="Run MakeShift"/>
 </div>
@@ -19,6 +19,8 @@ The lab runs MakeShift templates on the fly to make five random results. Enter y
   <textarea id="textInput" rows="24" cols="50" placeholder="add your MakeShift template here"></textarea>
   <textarea id="results" readonly rows="24" cols="40" placeholder="generated results will appear here"></textarea>
 </div>
+
+<script src="makeshift.js"></script>
 
 
 The MakeShift Lab is built using [Pyodide](https://pyodide.org/en/stable/) running the [latest PyPI release of MakeShift](https://pypi.org/project/makeshift/). There may be features and bug fixes in the GitHub repository that are not yet published as a new release on PyPI.
