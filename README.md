@@ -1,8 +1,8 @@
 # MakeShift
 
-MakeShift is a tool for making procedurally generated text based on pre-defined phrase templates. 
+MakeShift is a tool for making procedurally generated text based on predefined phrase templates. 
 
-This package includes a simple specification for how to write MakeShift-style phrase templates and an interpreter for generating text from those templates.
+This is a dependency-free, pure Python package that includes a simple specification for how to write MakeShift-style phrase templates and an interpreter for generating text from those templates.
 
 MakeShift is designed for dungeon masters, writers and storytellers of all kinds to find inspiration when making new `{ characters | settings | stories | worlds | anything }`.
 

@@ -3,7 +3,7 @@ Shrine
 
 Name
 	The {descriptor} {place} 40%
-	{place} of {diety} 40%
+	{place} of {deity} 40%
 	Place where the {animal.plural} {action} 10%
 	{place} of the {number} {animal.plural} 10%
 
@@ -16,7 +16,7 @@ descriptor
 	{adjective} 67%
 	{action.gerund} 33%
 
-diety
+deity
 	{concept} 30%
 	the {person} 20%
 	the {animal} 20%

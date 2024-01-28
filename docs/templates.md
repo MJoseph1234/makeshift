@@ -40,7 +40,7 @@ monster
    Wraith
 ```
 
-Now, whenever we encounter the `{monster}` placeholder, we'll pick an option from the `monster` list. We could still get "The Banshee Bay," but we might also get "The Sprit Bay," "The Phantom Bay," or "The Wraith Bay."
+Now, whenever we encounter the `{monster}` placeholder, we'll pick an option from the `monster` list. We could still get "The Banshee Bay," but we might also get "The Spirit Bay," "The Phantom Bay," or "The Wraith Bay."
 
 Let's add some more placeholders. The word 'bay' is just a natural feature, and the word 'tides' is too. Let's replace those with a `{natural_feature}` placeholder. While we're at it, let's add a list of a few `natural_feature` choices.
 ```

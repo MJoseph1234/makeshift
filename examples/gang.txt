@@ -19,14 +19,14 @@ Patron
 	The {verb.gerund|verb.past_participle} {concept}
 	{adjective} {concept}
 	{concept}
-	{Diety}'s {concept}
-	{Diety}
+	{Deity}'s {concept}
+	{Deity}
 
 adjective
 	Holy
 	Wicked
 	Ruthless
-	Annointed
+	Anointed
 	Great
 	Minor
 	Grave
@@ -57,7 +57,7 @@ Grouping
 	Clan
 	Coalition
 
-Diety
+Deity
 	The High Table
 	Gaia
 	The Earthmother
@@ -118,7 +118,7 @@ Occupation
 	Guardian
 	Town Watch
 	Protector
-	Theif
+	Thief
 	Raider
 	Dock Worker
 	Knight

@@ -252,7 +252,7 @@ item
 	Rake
 	Rook
 	Scale
-	Sceptre
+	Scepter
 	Scroll
 	Scythe
 	Ship
