@@ -1,4 +1,11 @@
-# The lexer turns the raw input into a series of defined Tokens
+"""
+The lexer turns the raw input into a series of defined Tokens
+
+TODO: get rid of match method, because we don't ever use it. Clean up tests too
+TODO: rename lexv2 method to .tokenize
+TODO: don't require input when initializing. do it all through .tokenize method
+"""
+
 
 from makeshift.interpreter.utils import GeneratorSyntaxError
 from makeshift.interpreter.token import TokenType, Token
@@ -20,6 +27,14 @@ KEYS = {
 	'EQUALS': '='
 	}
 
+def is_string_char(char):
+	return(char.isalpha() or char in " !\'\"#$&'`()*,+-_/:;<>?@[]\\^_~")
+	
+	if ord(char) in {ord(x) for x in " !\'\"#$&'`()*,+-_/:;<>?@[]\\^_~"}:
+		return(True)
+	else:
+		return(char.isalpha())
+
 class Lexer():
 	def __init__(self, inp):
 		self.inp = inp.strip() #leading/trailing whitespace in file doesn't affect the grammar
@@ -29,12 +44,14 @@ class Lexer():
 		self.tokens = []
 
 	def add_token(self, token_type, literal = None, line = None, offset = None):
-		if offset is None:
-			offset = self.offset
-		if line is None:
-			line = self.line
 		if token_type.name in KEYS and literal is None:
 			literal = KEYS.get(token_type.name)
+
+		if offset is None:
+			offset = self.offset - len(literal)
+		if line is None:
+			line = self.line
+		
 		self.tokens.append(Token(token_type, literal, line, offset))
 		return
 
@@ -56,31 +73,31 @@ class Lexer():
 		self.offset += 1
 		return(True)
 
-	def peek(self):
+	def peek(self, ct = 0):
 		if self.is_at_end():
 			return(False)
-		return(self.inp[self.index])
+		return(self.inp[self.index + ct])
 
 	def handle_number(self):
-		start = self.index - 1
+		start_index = self.index - 1
+		start_offset = self.offset - 1
 
 		while not self.is_at_end() and self.peek().isdigit():
 			self.advance()
 
-		offset = self.offset - (self.index - start)
-
-		self.add_token(TokenType.NUMBER, self.inp[start:self.index], offset = offset)
+		self.add_token(TokenType.NUMBER, self.inp[start_index:self.index], offset = start_offset)
 		return
 
 	def handle_string(self):
-		start = self.index - 1
+		start_index = self.index - 1
+		start_offset = self.offset - 1
 		
-		while (not self.is_at_end()) and (self.peek().isalpha() or self.peek() in {'_', ' ', '\t', '\''}):
+		# while (not self.is_at_end()) and (self.peek().isalpha() or self.peek() in {'_', ' ', '\t', '\''}):
+		# 	self.advance()
+		while not self.is_at_end() and is_string_char(self.peek()):
 			self.advance()
 
-		offset = self.offset - (self.index - start)
-
-		self.add_token(TokenType.STRING, self.inp[start:self.index], offset = offset)
+		self.add_token(TokenType.STRING, self.inp[start_index:self.index], offset = start_offset)
 		return
 
 	def lexv2(self):
@@ -102,15 +119,21 @@ class Lexer():
 			elif char == '%':
 				self.add_token(TokenType.PERCENT)
 
-			elif char == '/' and self.match('/'):
+			# Handle comments
+			elif char == '/' and self.peek() == '/':
+				self.advance()
 				while self.peek() != '\n' and not self.is_at_end():
 					self.advance()
 
-			elif char == '\n':
+			elif char == '\n' or (char == '\r' and self.peek() == '\n'):
 				self.add_token(TokenType.NEWLINE)
+				if char == '\r' and self.peek() == '\n':
+					self.advance()
 				self.line += 1
 				self.offset = 0
-				while self.peek() == '\n' and not self.is_at_end():
+				while not self.is_at_end() and (self.peek() == '\n' or (self.peek() == '\r' and self.peek(1) == '\n')):
+					if self.peek() == '\r' and self.peek(1) == '\n':
+						self.advance()
 					self.advance()
 					self.line += 1
 					self.offset = 0
@@ -118,13 +141,13 @@ class Lexer():
 			elif char.isdigit():
 				self.handle_number()
 
-			elif char.isascii():
+			elif is_string_char(char):
 				self.handle_string()
 
 			else:
 				raise GeneratorSyntaxError(f'Unknown character at line {self.line} position {self.offset}')
 
-		self.add_token(TokenType.EOF, offset = self.offset + 1)
+		self.add_token(TokenType.EOF, offset = self.offset)
 
 		return(self.tokens)
 

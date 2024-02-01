@@ -1,6 +1,12 @@
 """The parser takes the list of Tokens from the Lexer and builds an 
 abstract syntax tree.
 
+TODO: combine or clarify peek vs check vs match vs previous. Have them
+behave similar to their lexer.py counterparts
+TODO: raising generatorsyntaxerror in definition, name, option and method_name
+could all be done through expect method. 
+TODO: simplify entrypoint. Don't require tokens at initialization. New method
+for parser.parse(tokens)?
 """
 
 from makeshift.interpreter.utils import GeneratorSyntaxError
@@ -61,20 +67,13 @@ class Parser():
 				f'line {self.peek().line} but got {self.peek().type}')
 		
 		options = []
-		while self.check(TokenType.TAB):
+		while self.check(TokenType.TAB):# or (self.check(TokenType.STRING) and self.peek().lexeme in {'  ', '   '}):
 			self.consume()
 			if self.check(TokenType.NEWLINE):
 				self.consume()
 				continue
 			options.append(self.option())
 		return(ast.Definition(name = name, options = options))
-
-	def name(self):
-		if not self.check(TokenType.STRING):
-			raise GeneratorSyntaxError(f'Expected string for name definition'\
-				f' in line {self.peek().line} but got {self.peek().type}')
-
-		return(ast.Name(self.consume().value.strip()))
 
 	def option(self):
 		#TO DO figure out how to parse out the percentage
@@ -148,6 +147,13 @@ class Parser():
 		else:
 			method = None
 		return(ast.Reference(name = name, method = method))
+
+	def name(self):
+		if not self.check(TokenType.STRING):
+			raise GeneratorSyntaxError(f'Expected string for name definition'\
+				f' in line {self.peek().line} but got {self.peek().type}')
+
+		return(ast.Name(self.consume().value.strip()))
 
 	def string_literal(self):
 		if self.check(TokenType.NUMBER):
