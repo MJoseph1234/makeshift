@@ -10,6 +10,22 @@ const textInput = document.getElementById("textInput");
 const resultsArea = document.getElementById("results");
 const counter = 1;
 
+textInput.addEventListener('keydown', function(e) {
+  if (e.key == 'Tab') {
+    e.preventDefault();
+    var start = this.selectionStart;
+    var end = this.selectionEnd;
+
+    this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
+
+    this.selectionStart = this.selectionEnd = start + 1;
+  }
+});
+
+function wrap(s) {
+ return(s.replace(/(?![^\n]{1,40}$)([^\n]{1,40})\s/g, '$1\n  '));
+}
+
 async function loadMakeshift(){
   let pyodide = await loadPyodide();
   await pyodide.loadPackage("micropip");
@@ -33,24 +49,26 @@ async function runMakeshift(){
     from makeshift.interpreter.parser import Parser
     from makeshift.interpreter.interpreter import TreeWalkInterpreter
     
-    text = js.textInput.value.replace("\\r\\n", "\\n")
-    text = text.replace("   ", "\\t")
-    
+    text = js.textInput.value
     s = Lexer(text)
     s.lexv2()
     pr = Parser(s.tokens)
     ast = pr.generator("sample")
     interp = TreeWalkInterpreter()
-    output_list = set()
+    output_list = []
 
     while len(output_list) < 5:
-      output_list.add(interp.visit_generator_node(ast))
+      output_list.append(interp.visit_generator_node(ast))
 
-    list(output_list)
+    output_list
   `);
   updateResults(results);
 }
 
 function updateResults(results) {
-  resultsArea.value = results.join('\n')
+  var formattedResults = ''
+  for (let i = 0; i < results.length; i++) {
+    formattedResults += (i+1) + '. ' + wrap(results[i]) + '\n'
+  }
+  resultsArea.value = formattedResults
 }
