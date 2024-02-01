@@ -15,15 +15,13 @@ textInput.addEventListener('keydown', function(e) {
     e.preventDefault();
     var start = this.selectionStart;
     var end = this.selectionEnd;
-
     this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
-
     this.selectionStart = this.selectionEnd = start + 1;
   }
 });
 
 function wrap(s) {
- return(s.replace(/(?![^\n]{1,40}$)([^\n]{1,40})\s/g, '$1\n  '));
+  return(s.replace(/(?![^\n]{1,40}$)([^\n]{1,40})\s/g, '$1\n  '));
 }
 
 async function loadMakeshift(){

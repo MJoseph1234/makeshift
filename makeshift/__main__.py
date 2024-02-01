@@ -3,7 +3,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from makeshift.interpreter import run
+from makeshift.interpreter import generate
 
 def parse_cli_args():
 	parser = argparse.ArgumentParser(
@@ -33,13 +33,13 @@ def main():
 	with open(filename) as template_file:
 		source = template_file.read()
 
-	results = run(source, count = args.count)
+	results = generate(source, count = args.count)
 
-	if len(results) == 1:
+	if args.count == 1:
 		print(results[0])
 		return
 
-	for i in range(0, len(results)):
+	for i in range(0, args.count):
 		print(f'{i+1:>2}. {results[i]}')
 	return
 
