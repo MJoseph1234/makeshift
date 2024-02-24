@@ -5,7 +5,7 @@ title: About
 
 # About
 
-MakeShift started as a tool to assist dungeon masters and game masters playing games like Dungeons & Dragons. I wanted a quick an easy way to come up with ideas when my players would ask questions like *"What's the name of the local tavern or inn?"* 
+MakeShift started as a tool to assist dungeon masters and game masters playing games like Dungeons & Dragons. I wanted a quick and easy way to come up with ideas when my players would ask questions like *"What's the name of the local tavern or inn?"* 
 
 With MakeShift, if I don't already have a name prepared, I can use
 ```bash

@@ -4,7 +4,7 @@ title: Writing Templates
 ---
 
 # Writing MakeShift Templates
-Writing a new template for MakeShift requires an idea, a little creativity, and understanding the simple MakeShift syntax. You can write a template in your favorite text editor, like Notepad++, Sublime Text, or directly into the [lab](lab.html) editor. So pop open your favorite editor and let's get started with an example.
+Writing a new template for MakeShift requires an idea, a little creativity, and understanding the MakeShift syntax. You can write a template in your favorite text editor, like Notepad++, Sublime Text, or directly into the [lab](lab.html) editor. So pop open your favorite editor and let's get started with an example.
 
 ## The Idea
 The first thing you need for a new MakeShift template is an idea of what you want to create. Are you naming a new location? Coming up with a new character? Listing the items inside a treasure chest? 
@@ -59,10 +59,11 @@ natural_feature
    Coast
    Coastline
    Seashore
+   Tides
    Waters
 ```
 
-The word 'Twilight' isn't really an adjective here, but that's ok, we're going to say it is one anyway so we can replace it with another placeholder:
+The word 'Twilight' is technically a noun, but we're kind of using it as a descriptor or adjective here. We're going to pretend it's an adjective so we can replace it with another placeholder:
 ```
 beach
    The {monster} {natural_feature}
@@ -79,6 +80,7 @@ natural_feature
    Coast
    Coastline
    Seashore
+   Tides
    Waters
 
 adjective
@@ -92,6 +94,8 @@ Great! We've expanded the possibilities for our beach names by using placeholder
 1. The word 'The', followed by a monster and then a natural feature
 2. An adjective followed by a natural feature
 
-Those formats then pull random options from our three lists.
+and each of these formats then pull random options from our three lists.
 
-With just a couple lines and some fun adjectives, we have a template that can create about 40 random names for our haunted beaches.
+With just a couple lines and some fun adjectives, we have a template that can create almost 50 random names for our haunted beaches.
+
+Our template so far uses Lists and Placeholders, two of MakeShifts core tools. Additional features like nested placeholders, in-line lists, and list methods all give us even more power to mix things up. Check out the `examples/` directory on the GitHub repository to see some of these other features in action. Combining these tools with a few more creative ideas could produce an unlimited number of scary beach names or really anything else you can think of.
