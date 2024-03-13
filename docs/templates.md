@@ -27,7 +27,7 @@ beach
    Twilight Tides
 ```
 
-Great! Now let's pick some spooky-sounding monsters that could get plugged in here. We'll add a new entry for `monster` with a couple options below it:
+Great! Now let's pick some spooky-sounding monsters that could get plugged in here. We'll add a new definition for `monster` with a couple options below it:
 ```
 beach
    The {monster} Bay
@@ -40,9 +40,9 @@ monster
    Wraith
 ```
 
-Now, whenever we encounter the `{monster}` placeholder, we'll pick an option from the `monster` list. We could still get "The Banshee Bay," but we might also get "The Spirit Bay," "The Phantom Bay," or "The Wraith Bay."
+Now, whenever we encounter the `{monster}` placeholder, we'll pick an option from the `monster` definition list. We could still get "The Banshee Bay," but we might also get "The Spirit Bay," "The Phantom Bay," or "The Wraith Bay."
 
-Let's add some more placeholders. The word 'bay' is just a natural feature, and the word 'tides' is too. Let's replace those with a `{natural_feature}` placeholder. While we're at it, let's add a list of a few `natural_feature` choices.
+Let's add some more placeholders. The word 'bay' is just a natural feature, and the word 'tides' is too. Let's replace those with a `{natural_feature}` placeholder. While we're at it, let's define `natural_feature` with a few choices.
 ```
 beach
    The {monster} {natural_feature}
@@ -63,7 +63,7 @@ natural_feature
    Waters
 ```
 
-The word 'Twilight' is technically a noun, but we're kind of using it as a descriptor or adjective here. We're going to pretend it's an adjective so we can replace it with another placeholder:
+The word 'Twilight' is technically a noun, but we're kind of using it as a descriptor or adjective here. We're going to pretend it's an adjective so we can replace it with another placeholder, and a new `adjective` definition:
 ```
 beach
    The {monster} {natural_feature}
@@ -90,12 +90,12 @@ adjective
    Ghostly
 ```
 
-Great! We've expanded the possibilities for our beach names by using placeholders and lists. Based on this template, a beach name will follow two general formats:
+Great! We've expanded the possibilities for our beach names by inserting placeholders and defining a few lists to pull from. Based on this template, a beach name will follow two general formats:
 1. The word 'The', followed by a monster and then a natural feature
 2. An adjective followed by a natural feature
 
-and each of these formats then pull random options from our three lists.
+and each of these formats then pull random options from our three definitions.
 
 With just a couple lines and some fun adjectives, we have a template that can create almost 50 random names for our haunted beaches.
 
-Our template so far uses Lists and Placeholders, two of MakeShifts core tools. Additional features like nested placeholders, in-line lists, and list methods all give us even more power to mix things up. Check out the `examples/` directory on the GitHub repository to see some of these other features in action. Combining these tools with a few more creative ideas could produce an unlimited number of scary beach names or really anything else you can think of.
+Our template so far uses Definitions and Placeholders, two of MakeShift's core tools. Additional features like nested placeholders, in-line lists, and placeholder methods all give us even more power to mix things up. Check out the `examples/` directory on the GitHub repository to see some of these other features in action. Combining these tools with a few more creative ideas could produce an unlimited number of scary beach names or really anything else you can think of.
