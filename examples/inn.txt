@@ -3,10 +3,13 @@ Inn
 
 Name
 	Inn of the {descriptor} {animal | item | person }
-	The {animal | person} {animal | person | item | place}
+	The {animal | person} {item | place}
+	The {animal} {person}
+	The {person} {animal}
 	The {person | animal}'s {place | item.plural}
 	The {item} {place}
-	{animal | person | item | place} and {animal | person | item | place}
+	{animal | person | item} and {animal | person | item}
+	{person | animal | item} and {person | animal | item} {place}
 
 descriptor
 	{adjective}
