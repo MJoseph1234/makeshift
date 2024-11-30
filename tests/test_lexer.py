@@ -143,18 +143,18 @@ class TestLexer(unittest.TestCase):
 		#[Token(EOF, None, line 1 pos 1)]
 		result = Token(TokenType.EOF, None, 1, 0)
 		x = Lexer('')
-		self.assertEqual(x.lexv2(), [result])
+		self.assertEqual(x.tokenize(), [result])
 		x = Lexer(' ')
-		self.assertEqual(x.lexv2(), [result])
+		self.assertEqual(x.tokenize(), [result])
 		x = Lexer('\t')
-		self.assertEqual(x.lexv2(), [result])
+		self.assertEqual(x.tokenize(), [result])
 		x = Lexer('\n')
-		self.assertEqual(x.lexv2(), [result])
+		self.assertEqual(x.tokenize(), [result])
 
 	def test_lexer(self):
 		x = Lexer('{}|.\t ():\t	\n%//comment\na/sd\\nf1234')
 		#x = Lexer('{}|.\t \t	\n%//\nasdf1234')
-		x.lexv2()
+		x.tokenize()
 		expected_tokens = [
 			Token(TokenType.OPEN_BRACE, '{', 1, 0),
 			Token(TokenType.CLOSE_BRACE, '}', 1, 1),
@@ -191,15 +191,15 @@ class TestLexer(unittest.TestCase):
 		]
 		for ct, pair in enumerate(string_pairs):
 			with self.subTest(i=ct):
-				lf = Lexer(pair[0]).lexv2()
-				crlf = Lexer(pair[1]).lexv2()
+				lf = Lexer(pair[0]).tokenize()
+				crlf = Lexer(pair[1]).tokenize()
 				self.assertEqual(lf, crlf)
-		# lf = Lexer('asdf\n1234').lexv2()
-		# crlf = Lexer('asdf\r\n1234').lexv2()
+		# lf = Lexer('asdf\n1234').tokenize()
+		# crlf = Lexer('asdf\r\n1234').tokenize()
 		# self.assertEqual(lf, crlf)
 
-		# lf = Lexer('\n').lexv2()
-		# crlf = Lexer('\r\n').lexv2()
+		# lf = Lexer('\n').tokenize()
+		# crlf = Lexer('\r\n').tokenize()
 		# self.assertEqual(lf, crlf)
 
 	# def test_comments(self):

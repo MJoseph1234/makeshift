@@ -2,7 +2,6 @@
 The lexer turns the raw input into a series of defined Tokens
 
 TODO: get rid of match method, because we don't ever use it. Clean up tests too
-TODO: rename lexv2 method to .tokenize
 TODO: don't require input when initializing. do it all through .tokenize method
 """
 
@@ -100,7 +99,7 @@ class Lexer():
 		self.add_token(TokenType.STRING, self.inp[start_index:self.index], offset = start_offset)
 		return
 
-	def lexv2(self):
+	def tokenize(self):
 		while not self.is_at_end():
 			start = self.index
 

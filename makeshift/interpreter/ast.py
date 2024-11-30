@@ -45,6 +45,8 @@ class Node():
 	def accept_visitor(self, visitor):
 		raise NotImplementedError
 
+# The overall thing to be generated. Usually a singlular file that represents
+# the thing to be made
 class Generator(Node):
 	def __init__(self, title, top_definition, definitions):
 		super().__init__()
@@ -55,6 +57,7 @@ class Generator(Node):
 	def accept_visitor(self, visitor):
 		return(visitor.visit_generator_node(self))
 
+# A single term with a list of options that could be used to define that term
 class Definition(Node):
 	def __init__(self, name, options):
 		super().__init__()
@@ -64,6 +67,7 @@ class Definition(Node):
 	def accept_visitor(self, visitor):
 		return(visitor.visit_definition_node(self))
 
+# A term or name for a definition. Usually a single-word string
 class Name(Node):
 	def __init__(self, value):
 		super().__init__()
@@ -72,6 +76,8 @@ class Name(Node):
 	def accept_visitor(self, visitor):
 		return(visitor.visit_name_node(self))
 
+# a line of text under a term or name that is one of the choices for a definition
+# for that name or term. Usually looks like a single sentence or phrase
 class Option(Node):
 	def __init__(self, expression, percent = None):
 		super().__init__()
@@ -81,6 +87,8 @@ class Option(Node):
 	def accept_visitor(self, visitor):
 		return(visitor.visit_option_node(self))
 
+# segments that make up an Option. Usually sentence fragments consisting
+# of string literals and groups of other resovable options within curly brackets
 class Expression(Node):
 	def __init__(self, subexpressions): #string = None, resolvable = None, subexpressions = None):
 		super().__init__()
@@ -92,6 +100,8 @@ class Expression(Node):
 	def accept_visitor(self, visitor):
 		return(visitor.visit_expression_node(self))
 
+# a segment of an expression between curly brackets that contains a list of 
+# choices or a reference to another definition from which a choice should be made
 class Resolvable(Node):
 	def __init__(self, segments): #name = None, method = None, expression = None, segments = None):
 		super().__init__()
@@ -104,6 +114,7 @@ class Resolvable(Node):
 	def accept_visitor(self, visitor):
 		return(visitor.visit_resolvable_node(self))
 
+# A string to use as-is. No choice/option/random roll to be made
 class String_Literal(Node):
 	def __init__(self, value):
 		super().__init__()
@@ -112,6 +123,9 @@ class String_Literal(Node):
 	def accept_visitor(self, visitor):
 		return(visitor.visit_string_literal_node(self))
 
+# a choice within an resolvable segment that indicates we should look to 
+# another definition to make a choice from there. Possibly modify that choice
+# with a method
 class Reference(Node):
 	def __init__(self, name, method = None):
 		super().__init__()
@@ -121,6 +135,7 @@ class Reference(Node):
 	def accept_visitor(self, visitor):
 		return(visitor.visit_reference_node(self))
 
+# A function/macro to use to modify a value within a resolvable
 class Method(Node):
 	def __init__(self, method_name):
 		super().__init__()

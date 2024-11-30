@@ -5,7 +5,7 @@ from makeshift.interpreter.interpreter import TreeWalkInterpreter
 
 def generate(source, title = '', count = 1):	#, unique = True):
 
-	tokens = Lexer(source).lexv2()
+	tokens = Lexer(source).tokenize()
 	ast = Parser(tokens).generator("")
 	results = []
 

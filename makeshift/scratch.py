@@ -48,7 +48,7 @@ def run_lexer(filename):
 def run_lexer_v2(filename):
 	with open(filename) as inp_file:
 		x = Lexer(inp_file.read())
-		x.lexv2()
+		x.tokenize()
 	return(x)
 
 def test_ast_print():
@@ -175,7 +175,7 @@ def run_from_cli():
 		return
 
 	x = Lexer(args.infile.read())
-	x.lexv2()
+	x.tokenize()
 	args.infile.close()
 
 	pr = Parser(x.tokens)

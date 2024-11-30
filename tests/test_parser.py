@@ -10,7 +10,7 @@ from makeshift.interpreter.token import Token, TokenType
 class TestParserMethods(unittest.TestCase):
 	def setUp(self):
 		self.lexer = Lexer('abc\n\t123')
-		self.tokens = self.lexer.lexv2()
+		self.tokens = self.lexer.tokenize()
 		self.parser = Parser(self.tokens)
 
 	def test_init(self):
