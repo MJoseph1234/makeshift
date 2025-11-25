@@ -49,7 +49,7 @@ async function runMakeshift(){
     
     text = js.textInput.value
     s = Lexer(text)
-    s.tokenize()
+    s.lex2()
     pr = Parser(s.tokens)
     ast = pr.generator("sample")
     interp = TreeWalkInterpreter()

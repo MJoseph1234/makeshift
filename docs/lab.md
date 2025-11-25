@@ -9,7 +9,7 @@ The lab runs MakeShift templates on the fly to make five random results. Enter y
 
 > ⚠️ The Lab is experimental and may be running an old version of MakeShift
 
-<script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+<script src="https://cdn.jsdelivr.net/pyodide/v0.29.0/full/pyodide.js"></script>
 <link rel="stylesheet" href="lab_styles.css">
 
 <div>
