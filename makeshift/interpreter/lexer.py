@@ -101,8 +101,6 @@ class Lexer():
 
 	def tokenize(self):
 		while not self.is_at_end():
-			start = self.index
-
 			char = self.advance()
 
 			if char == '{':

@@ -28,7 +28,7 @@ class Token():
 
 	def __repr__(self):
 		if self.type in {TokenType.NEWLINE, TokenType.TAB}:
-			lexeme = self.lexeme.replace("\\", "\\\\")
+			lexeme = self.lexeme.replace("\n", "\\n").replace('\t', '\\t')
 		else:
 			lexeme = self.lexeme
 		return(f'Token({self.type}, "{lexeme}", line {self.line}, offset {self.offset})')

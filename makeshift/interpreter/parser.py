@@ -16,7 +16,7 @@ from makeshift.interpreter import ast
 class Parser():
 	def __init__(self, tokens):
 		self.tokens = tokens
-		self.pos = 0 #points to the next token to be read
+		self.pos = 0 # points to the next token to be read
 
 	def consume(self):
 		#return the next token and move the pointer
