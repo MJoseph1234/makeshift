@@ -84,8 +84,8 @@ class Option(Node):
 		self.expression = expression
 		self.percent = percent
 
-	def accept_visitor(self, visitor):
-		return(visitor.visit_option_node(self))
+	def accept_visitor(self, visitor, **kwargs):
+		return(visitor.visit_option_node(self, **kwargs))
 
 # segments that make up an Option. Usually sentence fragments consisting
 # of string literals and groups of other resovable options within curly brackets
