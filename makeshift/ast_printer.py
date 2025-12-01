@@ -4,6 +4,7 @@ import makeshift.interpreter.ast as ast
 
 class AstPrinter(ast.Visitor):
 	def __init__(self, target = sys.stdout):
+		self.target = target
 		self.depth = 0
 		self.increment = 3
 
@@ -22,48 +23,52 @@ class AstPrinter(ast.Visitor):
 			definition.accept_visitor(self)
 
 	def visit_definition_node(self, definition):
-		self.target.write(f'{" "*self.depth}definition')
+		self.target.write(f'{" "*self.depth}definition: "{definition.name.value}"\n')
 		self.indent()
-		definition.name.accept_visitor(self)
+		counter = 0
 		for option in definition.options:
-			option.accept_visitor(self)
+			counter += 1
+			option.accept_visitor(self, count = counter)
 		self.deindent()
 
 	def visit_name_node(self, name):
-		self.target.write(f'{" "*self.depth}name: {name.value}')
+		self.target.write(f'{" "*self.depth}name: "{name.value}"\n')
 
-	def visit_option_node(self, option):
-		self.target.write(f'{" "*self.depth}option percent: {option.percent}')
+	def visit_option_node(self, option, count):
+		if option.percent:
+			self.target.write(f'{" "*self.depth}option {count}. Percent: {option.percent}\n')
+		else:
+			self.target.write(f'{" "*self.depth}option {count}\n')
 		self.indent()
 		option.expression.accept_visitor(self)
 		self.deindent()
 
 	def visit_expression_node(self, expr):
-		self.target.write(f'{" "*self.depth}expression')
+		self.target.write(f'{" "*self.depth}expression\n')
 		self.indent()
 		for subex in expr.subexpressions:
 			subex.accept_visitor(self)
 		self.deindent()
 
 	def visit_resolvable_node(self, res):
-		self.target.write(f'{" "*self.depth}resolvable')
+		self.target.write(f'{" "*self.depth}resolvable\n')
 		self.indent()
 		for segment in res.segments:
 			segment.accept_visitor(self)
 		self.deindent()
 
 	def visit_string_literal_node(self, string):
-		self.target.write(f'{" "*self.depth}string literal: "{string.value}"')
+		self.target.write(f'{" "*self.depth}string literal: "{string.value}"\n')
 
 	def visit_reference_node(self, reference):
-		self.target.write(f'{" "*self.depth}reference')
+		self.target.write(f'{" "*self.depth}reference\n')
 		self.indent()
 		reference.name.accept_visitor(self)
 		if reference.method is not None:
 			reference.method.accept_visitor(self)
 		else:
-			self.target.write(f'{" "*self.depth}method: None')
+			self.target.write(f'{" "*self.depth}method: None\n')
 		self.deindent()
 
 	def visit_method_node(self, method):
-		self.target.write(f'{" "*self.depth}method: {method.method_name}')
+		self.target.write(f'{" "*self.depth}method: {method.method_name}\n')
